@@ -1,0 +1,59 @@
+
+[
+    {
+        "title": "Xphyrus",
+        "description": "Cloud Native Online Assessment Platform",
+        "details": [
+            "Developed microservices using ASP.NET Core with RabbitMQ and MS SQL for backend.",
+            "Deployed Kubernetes cluster on Azure with Persistent Volumes and Nginx for load balancing.",
+            "Built a Golang RCE engine for containerized code execution under 1 second."
+        ],
+        "github": "https://github.com/arya2004/xphyrus"
+    },
+    {
+        "title": "Xyfin",
+        "description": "Banking Service Backend in Go",
+        "details": [
+            "Developed RESTful APIs with Gin, JWT/PASETO authentication, and unit tests.",
+            "Deployed using Docker on AKS with GitHub Actions for CI/CD.",
+            "Integrated gRPC services, Redis queuing, and background workers for task management."
+        ],
+        "github": "https://github.com/arya2004/Xyfin"
+    },
+    {
+        "title": "Aerial2Map",
+        "description": "Pix2Pix-based Satellite-to-Map Translation",
+        "details": [
+            "Implemented Pix2Pix GAN with U-Net for generator and PatchGAN for discriminator.",
+            "Trained on 256x256 RGB inputs, achieving improvements in map realism over 20 epochs."
+        ],
+        "github": "https://github.com/arya2004/aerial2map"
+    },
+    {
+        "title": "PulseGuard",
+        "description": "IoT-Based Remote Pulse Rate Monitoring System",
+        "details": [
+            "Developed using MongoDB Timeseries for storing readings and HighChartsJs for visualization.",
+            "Programmed ESP32 to send readings via REST API with WhatsApp message alerts."
+        ],
+        "github": "https://github.com/arya2004/pulse-guard"
+    },
+    {
+        "title": "Ray Tracer",
+        "description": "Basic Ray Tracer in C++",
+        "details": [
+            "Developed a basic ray tracer using C++ and SDL2 for rendering and visualization.",
+            "Implemented ray-sphere intersection, shading, and reflection algorithms."
+        ],
+        "github": "https://github.com/arya2004/ray-tracer"
+    },
+    {
+        "title": "Traffic Analyst Tool",
+        "description": "Real-Time Traffic Management System",
+        "details": [
+            "Built using Node.js, Express.js, and MongoDB for backend.",
+            "Integrated Bing Maps API and Azure Maps for real-time traffic data analysis."
+        ],
+        "github": "https://github.com/RevatiShimpi/Traffic"
+    }
+]
