@@ -1,0 +1,21 @@
+.container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.contact a {
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: hsl(71, 80%, 40%);
+}
+
