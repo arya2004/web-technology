@@ -27,6 +27,11 @@ public class ElectricityBillController {
         Map<String, Object> response = new HashMap<>();
         response.put("units", units);
         response.put("totalPrice", bill);
+        response.put("name", bills.getName());
+        response.put("address", bills.getAddress());
+        response.put("city", bills.getCity());
+        response.put("state", bills.getState());
+        response.put("zip", bills.getZip());
 
         return response;
     }
