@@ -1,0 +1,25 @@
+/* Make sure the body and html are at least 100% height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* This container will push the footer to the bottom if content is short */
+.content-wrapper {
+  flex: 1;
+}
+
+.footer {
+  /* If you prefer a fixed footer, you could do:
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     But here we're using a "sticky" approach so it stays at bottom if content is short. */
+}
