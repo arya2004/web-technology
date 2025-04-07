@@ -70,3 +70,8 @@ $result = $conn->query("SELECT * FROM test_table");
 </html>
 
 <?php $conn->close(); ?>
+
+Include
+dbconnect php
+insert php
+show php file
