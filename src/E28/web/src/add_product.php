@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php'
+require 'config.php';
 
 if(!($_SESSION['user_id'] && $_SESSION['is_farmer'])) {
     header('Location: login.php');
@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $desc = $_POST['description'];
     $price = $_POST['price'];
 
-    $stmt = $pdo->prepare("INSERT INTO productis (user_id, name, description, price) values (?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO products (user_id, name, description, price) values (?, ?, ?, ?)");
     $stmt->execute([$_SESSION['user_id'], $name, $desc, $price]);
 
     header('Location: index.php');
