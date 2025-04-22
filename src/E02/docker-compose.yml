@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/lib/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employees
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db_data:
+
+    
