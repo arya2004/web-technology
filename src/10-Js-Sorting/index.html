@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array Demo: Search & Sort</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Array Search & Sort Demo</h1>
+
+
+        <div class="card mb-5">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Integer Array</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="int-input" class="form-label">Enter numbers (comma-separated):</label>
+                    <input type="text" class="form-control" id="int-input" placeholder="e.g. 5,2,9,1,7">
+                </div>
+                <div class="mb-3 row g-2">
+                    <div class="col-auto">
+                        <button id="parse-int" class="btn btn-secondary">Parse Array</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="sort-int-asc" class="btn btn-success" disabled>Sort ↑</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="sort-int-desc" class="btn btn-success" disabled>Sort ↓</button>
+                    </div>
+                    <div class="col-auto">
+                        <input type="number" class="form-control" id="search-int" placeholder="Search value" disabled>
+                    </div>
+                    <div class="col-auto">
+                        <button id="search-int-btn" class="btn btn-warning" disabled>Search</button>
+                    </div>
+                </div>
+                <div>
+                    <strong>Current Array:</strong>
+                    <pre id="int-array-display">[]</pre>
+                    <strong>Result:</strong>
+                    <pre id="int-result"></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Named Entities Array</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="name-input" class="form-label">Enter names (comma-separated):</label>
+                    <input type="text" class="form-control" id="name-input" placeholder="e.g. Alice,Bob,Charlie">
+                </div>
+                <div class="mb-3 row g-2">
+                    <div class="col-auto">
+                        <button id="parse-name" class="btn btn-secondary">Parse Array</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="sort-name-asc" class="btn btn-success" disabled>Sort A→Z</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="sort-name-desc" class="btn btn-success" disabled>Sort Z→A</button>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="search-name" placeholder="Search name" disabled>
+                    </div>
+                    <div class="col-auto">
+                        <button id="search-name-btn" class="btn btn-warning" disabled>Search</button>
+                    </div>
+                </div>
+                <div>
+                    <strong>Current Array:</strong>
+                    <pre id="name-array-display">[]</pre>
+                    <strong>Result:</strong>
+                    <pre id="name-result"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
