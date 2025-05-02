@@ -1,0 +1,1 @@
+docker exec -i vit-mysql mysql -uroot -proot vit_results < db/schema.sql
