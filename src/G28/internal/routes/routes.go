@@ -45,34 +45,58 @@ func Register(r *gin.Engine) {
 		fp.PUT("/:id", handlers.UpdateProduct)
 		fp.DELETE("/:id", handlers.DeleteProduct)
 
-		// Farmer dashboard (HTML view)
 		fp.GET("", func(c *gin.Context) {
-			c.HTML(200, "products/farmer_form.html", gin.H{})
+			c.HTML(200, "_base.html", gin.H{
+				"Title": "Farmer Dashboard",
+				"Page":  "farmer_form.html",
+			})
 		})
 	}
 
 	// ---------------- HTML VIEWS ----------------
 
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "home.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Home",
+		})
 	})
-
+	
 	r.GET("/cart", middleware.AuthRequired(), func(c *gin.Context) {
-		c.HTML(200, "cart.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Your Cart",
+		})
 	})
+	
 	r.GET("/orders", middleware.AuthRequired(), func(c *gin.Context) {
-		c.HTML(200, "orders.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Your Orders",
+		})
 	})
+	
 	r.GET("/auth/login", func(c *gin.Context) {
-		c.HTML(200, "auth/login.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Login",
+		})
 	})
+	
 	r.GET("/auth/register", func(c *gin.Context) {
-		c.HTML(200, "auth/register.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Register",
+		})
 	})
+	
 	r.GET("/products", func(c *gin.Context) {
-		c.HTML(200, "products/list.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Products",
+		})
 	})
+	
 	r.GET("/products/:id", func(c *gin.Context) {
-		c.HTML(200, "products/show.html", gin.H{})
+		c.HTML(200, "_base.html", gin.H{
+			"Title": "Product Details",
+		})
 	})
+	
+	
+	
 }
