@@ -1,0 +1,103 @@
+{{ define "content" }}
+<h2 class="mb-4">My Products</h2>
+
+<!-- Add Product Button -->
+<button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#productModal">
+    + Add Product
+</button>
+
+<!-- Product List -->
+<table class="table table-bordered align-middle" id="productTable">
+    <thead class="table-light">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<!-- Product Modal (Create Only for Now) -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <form id="productForm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3 px-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Name</label>
+                        <input name="name" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Price (₹)</label>
+                        <input name="price" type="number" class="form-control" step="0.01" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Stock</label>
+                        <input name="stock" type="number" class="form-control" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Image URL</label>
+                        <input name="image_url" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Description</label>
+                        <textarea name="description" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        loadFarmerProducts();
+
+        const form = document.getElementById("productForm");
+        form.onsubmit = async e => {
+            e.preventDefault();
+            const formData = Object.fromEntries(new FormData(form));
+            await axios.post("/farmer/products", formData);
+            form.reset();
+            bootstrap.Modal.getInstance(document.getElementById("productModal")).hide();
+            loadFarmerProducts();
+        };
+    });
+
+    async function loadFarmerProducts() {
+        const { data: all } = await axios.get("/products");
+        const me = await axios.get("/me");
+        const mine = all.filter(p => p.farmer_id === me.data.user.id);
+
+        const tbody = document.querySelector("#productTable tbody");
+        tbody.innerHTML = "";
+        mine.forEach(p => {
+            tbody.insertAdjacentHTML("beforeend", `
+      <tr>
+        <td>${p.name}</td>
+        <td>₹${p.price.toFixed(2)}</td>
+        <td>${p.stock}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" onclick="deleteProduct(${p.id})">Delete</button>
+        </td>
+      </tr>`);
+        });
+    }
+
+    async function deleteProduct(id) {
+        if (!confirm("Are you sure?")) return;
+        await axios.delete("/farmer/products/" + id);
+        loadFarmerProducts();
+    }
+</script>
+{{ end }}
+{{ template "_base.html" . }}

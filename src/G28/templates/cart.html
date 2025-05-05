@@ -1,0 +1,52 @@
+{{ define "content" }}
+<h2 class="mb-4">My Cart</h2>
+<table class="table" id="cartTbl">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+        <tr>
+            <th>Total</th>
+            <th></th>
+            <th id="totalCell">0</th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>
+<button id="checkoutBtn" class="btn btn-success">Checkout</button>
+<script>
+    async function loadCart() {
+        const { data } = await axios.get("/cart");
+        const tb = document.querySelector("#cartTbl tbody");
+        tb.innerHTML = "";
+        data.items.forEach(it => {
+            tb.insertAdjacentHTML("beforeend", `
+      <tr>
+        <td>${it.product.name}</td>
+        <td>${it.quantity}</td>
+        <td>₹${(it.product.price * it.quantity).toFixed(2)}</td>
+        <td><button class="btn btn-sm btn-danger" onclick="removeItem(${it.id})">&times;</button></td>
+      </tr>`);
+        });
+        document.getElementById("totalCell").textContent = "₹" + data.total.toFixed(2);
+    }
+    async function removeItem(id) {
+        await axios.delete("/cart/" + id);
+        loadCart(); updateCartCount();
+    }
+    document.getElementById("checkoutBtn").onclick = async () => {
+        await axios.post("/checkout");
+        loadCart(); updateCartCount();
+        alert("Order placed!");
+        location = "/orders";
+    };
+    document.addEventListener("DOMContentLoaded", loadCart);
+</script>
+{{ end }}
+{{ template "_base.html" . }}

@@ -1,0 +1,29 @@
+{{ define "content" }}
+<div id="productCard"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const id = location.pathname.split("/").pop();
+        const { data } = await axios.get(`/products/${id}`);
+        document.getElementById("productCard").innerHTML = `
+    <div class="row">
+      <div class="col-md-5"><img src="${data.image_url || 'https://placehold.co/500x400'}" class="img-fluid rounded"></div>
+      <div class="col-md-7">
+        <h2>${data.name}</h2>
+        <p class="lead">₹${data.price.toFixed(2)}</p>
+        <p>${data.description || ''}</p>
+        <div class="d-flex align-items-center gap-2">
+          <input type="number" id="qty" class="form-control w-auto" value="1" min="1">
+          <button id="addBtn" class="btn btn-primary">Add to cart</button>
+        </div>
+      </div>
+    </div>`;
+        document.getElementById("addBtn").onclick = async () => {
+            const qty = +document.getElementById("qty").value || 1;
+            await axios.post("/cart", { product_id: data.id, quantity: qty });
+            updateCartCount();
+            alert("Added to cart!");
+        };
+    });
+</script>
+{{ end }}
+{{ template "_base.html" . }}

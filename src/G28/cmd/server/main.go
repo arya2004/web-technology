@@ -5,7 +5,7 @@ import (
 
 	"github.com/arya2004/farmmart/internal/config"
 	"github.com/arya2004/farmmart/internal/database"
-	"github.com/arya2004/farmmart/internal/models"
+	"github.com/arya2004/farmmart/internal/routes"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/postgres"
 	"github.com/gin-gonic/gin"
@@ -15,7 +15,7 @@ func main() {
 	cfg := config.Load()
 
 	database.Connect(cfg.DBConnStr)
-	models.AutoMigrate()
+	//models.AutoMigrate()
 
 	r := gin.Default()
 
@@ -33,8 +33,9 @@ func main() {
 
 	
 	r.Static("/static", "./static")
-
-	//routes.Register(r)
+	r.LoadHTMLGlob("templates/**/*")
+	routes.Register(r)
+	
 
 
 	if err := r.Run(":" + cfg.AppPort); err != nil {

@@ -14,6 +14,7 @@ func CurrentUser() gin.HandlerFunc {
 			var u models.User
 			if err := database.DB.First(&u, uid).Error; err == nil {
 				c.Set("currentUser", &u)
+				c.Set("CurrentUser", &u)
 			}
 		}
 

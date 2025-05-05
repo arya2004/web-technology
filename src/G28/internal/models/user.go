@@ -15,15 +15,17 @@ const (
 
 
 type User struct {
-	Base
-	Name     string `gorm:"size:120;not null" json:"name" binding:"required"`
-	Email    string `gorm:"size:120;uniqueIndex;not null" json:"email" binding:"required,email"`
-	Password string `gorm:"size:255;not null" json:"-"                       binding:"required,min=8"`
-	Role     Role   `gorm:"size:16;not null;default:customer" json:"role"`
-	Products []Product
-	Cart     Cart
-	Orders   []Order
+    Base
+    Name     string `gorm:"size:120;not null" json:"name" binding:"required"`
+    Email    string `gorm:"size:120;uniqueIndex;not null" json:"email" binding:"required,email"`
+    Password string `gorm:"size:255;not null" json:"-" binding:"required,min=8"`
+    Role     Role   `gorm:"size:16;not null;default:customer" json:"role"`
+
+    Products []Product `gorm:"foreignKey:FarmerID"` // <-- this fixes it
+    Cart     Cart
+    Orders   []Order
 }
+
 
 
 func (u *User) BeforeCreate(tx *gorm.DB) (err error){

@@ -1,0 +1,21 @@
+{{ define "content" }}
+<h2 class="mb-4">Create account</h2>
+<form id="registerForm" class="w-50">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input class="form-control" name="name" required>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" required minlength="8">
+        </div>
+    </div>
+    <button class="btn btn-success mt-3">Register</button>
+</form>
+{{ end }}
+{{ template "_base.html" . }}
