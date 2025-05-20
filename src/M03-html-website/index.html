@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blue-Lined Responsive Layout</title>
+    <style>
+        /* reset some defaults */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* outer wrapper with full blue border */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            border: 4px solid #0074D9;
+            /* darkish blue */
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        /* top content row: three columns */
+        .top-row {
+            display: flex;
+            flex: 1;
+        }
+
+        .top-row .side {
+            flex: 1;
+        }
+
+        .top-row .center {
+            flex: 4;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            /* inner vertical borders */
+            border-left: 4px solid #0074D9;
+            border-right: 4px solid #0074D9;
+        }
+
+        /* buttons row */
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            /* horizontal separator */
+            border-top: 4px solid #0074D9;
+        }
+
+        .btn-row .btn {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #0074D9;
+            transition: transform .1s ease;
+        }
+
+        .btn-row .btn:active {
+            transform: scale(0.9);
+        }
+
+        /* each button’s colour */
+        .btn.blue {
+            background: #0074D9;
+        }
+
+        .btn.red {
+            background: #FF4136;
+        }
+
+        .btn.orange {
+            background: #FF851B;
+        }
+
+        /* make it shrink gracefully on small screens */
+        @media (max-width: 500px) {
+            .top-row .center {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .btn-row {
+                padding: .5rem 0;
+            }
+
+            .btn-row .btn {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 0 .5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- top row: empty sidebars + center panel -->
+        <div class="top-row">
+            <div class="side"></div>
+            <div class="center" id="color-panel">
+                This section should change colour after clicking on following buttons
+            </div>
+            <div class="side"></div>
+        </div>
+
+        <!-- button row -->
+        <div class="btn-row">
+            <div class="btn blue" data-color="#0074D9"></div>
+            <div class="btn red" data-color="#FF4136"></div>
+            <div class="btn orange" data-color="#FF851B"></div>
+        </div>
+    </div>
+
+    <script>
+        // grab the panel and all the buttons
+        const panel = document.getElementById('color-panel');
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                panel.style.backgroundColor = btn.getAttribute('data-color');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
