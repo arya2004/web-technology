@@ -1,0 +1,16 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h5 {
+  color: #333;
+}
+
+#dynamicArea p {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
