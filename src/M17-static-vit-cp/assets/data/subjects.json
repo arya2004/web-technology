@@ -1,0 +1,324 @@
+{
+    "subjects": [
+      {
+        "id": "sdm",
+        "title": "Software Designing and Modelling",
+        "credits": "4",
+        "teachingScheme": "Theory: 2 Hours/Week, Tutorial: 1 Hour/Week, Lab: 2 Hours/Week",
+        "coursePrerequisites": "Basic understanding of programming, Data Structures",
+        "courseObjectives": [
+          "To understand the importance of modeling in software development",
+          "To learn UML notation and advanced design concepts",
+          "To get exposure to different phases of the SDLC",
+          "To practice design patterns in real projects",
+          "To develop skills to analyze and interpret design documents",
+          "To handle large-scale system design through modeling"
+        ],
+        "courseRelevance": "Software Designing and Modeling is crucial for large-scale software. UML is widely used for design and documentation.",
+        "units": [
+          {
+            "title": "Unit I: Introduction to Software Modeling",
+            "content": "Basics of modeling, UML introduction, difference between analysis and design, typical model-driven engineering approach."
+          },
+          {
+            "title": "Unit II: Requirements and Use-Case Modeling",
+            "content": "Understanding stakeholder needs, writing user stories, constructing use-case diagrams, capturing functional requirements, scenario analysis."
+          },
+          {
+            "title": "Unit III: Structural Modeling",
+            "content": "Class diagrams, object diagrams, relationships, attributes, operations, association, aggregation, composition, generalization."
+          },
+          {
+            "title": "Unit IV: Behavioral Modeling",
+            "content": "Sequence diagrams, communication diagrams, state machine diagrams, activity diagrams, describing interactions and workflows."
+          },
+          {
+            "title": "Unit V: Architectural Modeling",
+            "content": "Component diagrams, deployment diagrams, layering, architectural patterns (MVC, microservices), design patterns introduction."
+          },
+          {
+            "title": "Unit VI: Advanced Topics & Tools",
+            "content": "Refactoring designs, code generation from UML, reverse engineering, domain-specific modeling, introduction to SysML, UML tools usage."
+          }
+        ],
+        "tutorials": [
+          "Tutorial 1: Identifying Actors and Use Cases",
+          "Tutorial 2: Drawing Class Diagrams from Requirements",
+          "Tutorial 3: Creating Sequence Diagrams for a Web-based Application",
+          "Tutorial 4: Activity Diagram for a Payment Module",
+          "Tutorial 5: Introduction to UML Tools (StarUML, Visual Paradigm)",
+          "Tutorial 6: Applying Design Patterns in UML Models"
+        ],
+        "practicals": [
+          "Practical 1: Install an open-source UML tool and model a small application",
+          "Practical 2: Reverse engineer an existing code base to generate UML diagrams",
+          "Practical 3: Incorporate design patterns (Factory, Singleton) in a UML model",
+          "Practical 4: Generate class skeletons from a UML class diagram",
+          "Practical 5: Collaborate in a team to design a library management system",
+          "Practical 6: Validate use-case and sequence diagrams with the end user"
+        ],
+        "courseProjects": [
+          "Project 1: Model an E-commerce System using UML (Class, Use-case, Sequence, Deployment diagrams)",
+          "Project 2: Design a microservice architecture for a social media platform",
+          "Project 3: Develop a UML-based design for a hotel reservation system",
+          "Project 4: Implement an automated UML documentation tool integration with CI/CD",
+          "Project 5: Create a UML model for a real-time ticket booking system (cinema, bus, etc.)"
+        ],
+        "groupDiscussionAreas": [
+          "Comparative discussion on Agile vs. Waterfall in terms of modeling",
+          "Case studies of UML usage in large organizations",
+          "Industry best practices for design patterns",
+          "Challenges in adopting UML in fast-paced DevOps environments",
+          "Evaluation of modern modeling tools: advantages and limitations"
+        ],
+        "homeAssignmentAreas": [
+          "Design: Create a UML model for a simple banking application",
+          "Case Study: Evaluate how UML was used in a real open-source project",
+          "Blog: Write about evolving trends in software design and modeling",
+          "Survey: Investigate popular UML tools and their community usage"
+        ]
+      },
+      {
+        "id": "daa",
+        "title": "Design and Analysis of Algorithms",
+        "credits": "4",
+        "teachingScheme": "Theory: 2 Hours/Week, Tutorial: 1 Hour/Week, Lab: 2 Hours/Week",
+        "coursePrerequisites": "Data Structures, Discrete Mathematics",
+        "courseObjectives": [
+          "To impart knowledge of algorithmic design paradigms",
+          "To analyze complexity and performance of algorithms",
+          "To solve computational problems using advanced data structures",
+          "To practice optimization and approximation strategies",
+          "To introduce advanced topics like NP-completeness and coping strategies",
+          "To provide a foundation for competitive programming and research"
+        ],
+        "courseRelevance": "Algorithm design is central to Computer Science, impacting efficiency and feasibility of solutions in software and research contexts.",
+        "units": [
+          {
+            "title": "Unit I: Introduction & Basic Complexity",
+            "content": "Asymptotic notations, mathematical analysis of recursive and non-recursive algorithms, best/worst/average-case analysis, Master theorem."
+          },
+          {
+            "title": "Unit II: Divide-and-Conquer & Greedy Algorithms",
+            "content": "Merge sort, Quick sort, Strassen’s matrix multiplication, BFS/DFS-based greedy approaches, scheduling, knapsack, MST (Prim, Kruskal)."
+          },
+          {
+            "title": "Unit III: Dynamic Programming",
+            "content": "Matrix chain multiplication, longest common subsequence, knapsack variations, optimal BST, Floyd-Warshall algorithm, concept of memorization."
+          },
+          {
+            "title": "Unit IV: Advanced Graph Algorithms",
+            "content": "Topological sort, strongly connected components, bipartite matching, max-flow min-cut theorem, Edmond-Karp, Dinic’s algorithm."
+          },
+          {
+            "title": "Unit V: Backtracking & Branch-and-Bound",
+            "content": "N-Queens, Hamiltonian cycles, TSP, bounding functions, state-space search, BFS/DFS optimization, pruning techniques."
+          },
+          {
+            "title": "Unit VI: NP-Completeness & Approximation",
+            "content": "Classes P, NP, NP-Hard, polynomial-time reductions, Cook-Levin theorem overview, approximation strategies, heuristic algorithms."
+          }
+        ],
+        "tutorials": [
+          "Tutorial 1: Master theorem practice",
+          "Tutorial 2: Greedy algorithm proofs (activity selection, fractional knapsack)",
+          "Tutorial 3: DP solutions for classical problems",
+          "Tutorial 4: Graph traversals in detail",
+          "Tutorial 5: Max-flow min-cut problem solving",
+          "Tutorial 6: NP-Complete problem classification"
+        ],
+        "practicals": [
+          "Practical 1: Implement and compare Merge sort, Quick sort for large data sets",
+          "Practical 2: Greedy algorithms for MST and shortest paths",
+          "Practical 3: Dynamic programming approach for LCS and knapsack",
+          "Practical 4: Implement max-flow using Edmond-Karp algorithm",
+          "Practical 5: Backtracking solution for N-Queens or Sudoku solver",
+          "Practical 6: Explore a known NP-complete problem with approximation"
+        ],
+        "courseProjects": [
+          "Project 1: Analyze performance of sorting and searching in large real-time data",
+          "Project 2: Develop an algorithmic solution for route optimization in city logistics",
+          "Project 3: Implement advanced DP solutions for real-world scheduling problems",
+          "Project 4: Create a tool to visualize max-flow algorithms in networks",
+          "Project 5: Research project on approximation methods for NP-hard scheduling"
+        ],
+        "groupDiscussionAreas": [
+          "Trade-offs between different sorting algorithms in modern computing environments",
+          "Real-world cases for dynamic programming approach in finance or healthcare",
+          "Practical usage of BFS/DFS in graph-based applications",
+          "Ethical implications of approximate solutions in critical systems"
+        ],
+        "homeAssignmentAreas": [
+          "Design: Propose a new heuristic for TSP",
+          "Case Study: Large scale graph processing in social networks",
+          "Blog: Evolution of complexity theory from P vs NP debate",
+          "Survey: Emerging algorithmic paradigms (quantum computing, parallel algorithms)"
+        ]
+      },
+      {
+        "id": "wt",
+        "title": "Web Technology",
+        "credits": "4",
+        "teachingScheme": "Theory: 2 Hours/Week, Tutorial: 1 Hour/Week, Lab: 2 Hours/Week",
+        "coursePrerequisites": "Basic programming knowledge, Computer Networks fundamentals",
+        "courseObjectives": [
+          "To provide an understanding of the web architecture and protocols",
+          "To equip with client-side and server-side scripting knowledge",
+          "To introduce frameworks for rapid web application development",
+          "To discuss security best practices and performance optimization",
+          "To integrate RESTful APIs and database connectivity",
+          "To prepare students for full-stack development roles"
+        ],
+        "courseRelevance": "Web technology powers modern applications from simple blogs to complex e-commerce and cloud-based systems. Understanding the stack is essential for a wide range of careers.",
+        "units": [
+          {
+            "title": "Unit I: Web Basics & HTML/CSS",
+            "content": "Internet architecture, HTTP protocol, HTML5 structure, semantic elements, forms, introduction to CSS3, responsive design basics."
+          },
+          {
+            "title": "Unit II: Client-Side Scripting",
+            "content": "JavaScript essentials, DOM manipulation, event handling, AJAX, JSON, front-end frameworks overview (React, Vue, Angular)."
+          },
+          {
+            "title": "Unit III: Server-Side Scripting",
+            "content": "Node.js, Express.js basics, MVC pattern, form handling, session and cookies, introduction to PHP/Python frameworks, templating engines."
+          },
+          {
+            "title": "Unit IV: Database & ORM",
+            "content": "Relational databases overview, SQL queries, NoSQL introduction (MongoDB), using ORM tools like Sequelize or Mongoose, data modeling."
+          },
+          {
+            "title": "Unit V: Web Security & Performance",
+            "content": "Common vulnerabilities (XSS, SQL injection, CSRF), OWASP guidelines, performance optimization, caching, CDN usage, HTTP/2, SSL/TLS."
+          },
+          {
+            "title": "Unit VI: Advanced Topics & DevOps",
+            "content": "RESTful APIs, GraphQL basics, microservices architecture, Docker containers, CI/CD pipelines, deployment on cloud platforms."
+          }
+        ],
+        "tutorials": [
+          "Tutorial 1: Introduction to HTML/CSS with a mini project",
+          "Tutorial 2: JavaScript basics – building interactive forms",
+          "Tutorial 3: Server-side routing with Express.js or similar framework",
+          "Tutorial 4: Database schema design with SQL and NoSQL",
+          "Tutorial 5: Implementing authentication (JWT, OAuth)",
+          "Tutorial 6: Deploying a simple web app to a cloud service"
+        ],
+        "practicals": [
+          "Practical 1: Create a static website using HTML/CSS, host on GitHub Pages",
+          "Practical 2: Build an interactive page with JavaScript and DOM manipulation",
+          "Practical 3: Develop a basic Express.js application with routing and EJS/Pug",
+          "Practical 4: Connect to a database and perform CRUD operations",
+          "Practical 5: Implement user registration and login with security measures",
+          "Practical 6: Deploy a microservice-based app using Docker"
+        ],
+        "courseProjects": [
+          "Project 1: Develop a full-stack blog platform with Node.js and MongoDB",
+          "Project 2: Build an e-commerce site with user authentication and cart functionality",
+          "Project 3: Implement a real-time chat application using WebSockets",
+          "Project 4: Create a microservice for image processing and integrate with a front-end",
+          "Project 5: Setup a CI/CD pipeline for automated testing and deployment"
+        ],
+        "groupDiscussionAreas": [
+          "Comparison of front-end frameworks and their ecosystems",
+          "Scalability challenges in modern web apps",
+          "Best practices for secure web development",
+          "Impact of microservices on deployment and maintenance",
+          "Trends in serverless computing"
+        ],
+        "homeAssignmentAreas": [
+          "Design: Wireframe a large-scale content management system",
+          "Case Study: Analysis of a popular web application stack",
+          "Blog: Evolution of JavaScript frameworks and libraries",
+          "Survey: Modern container orchestration (Kubernetes, Docker Swarm)"
+        ]
+      },
+      {
+        "id": "cn",
+        "title": "Computer Networks",
+        "credits": "4",
+        "teachingScheme": "Theory: 2 Hours/Week, Tutorial: 1 Hour/Week, Lab: 2 Hours/Week",
+        "coursePrerequisites": "Operating System, Theory of Computer Science",
+        "courseObjectives": [
+          "To learn the data communication model, signal generation, data encoding, digital modulation and demodulation required for wired and wireless communication networks.",
+          "To learn the physical layer which includes transmission mediums, physical layer devices, transmission modes and topologies, performance issues for intranet and internetworks.",
+          "To learn multiple access schemes and wide area network connectivity for intranet and internetworks.",
+          "To learn IP protocol and routing algorithms for packet switching service framework used in intranet and internetworks.",
+          "To learn TCP and UDP protocol to provide quality of service over packet switching service framework used for intranet and internetworks.",
+          "To learn to select, design, develop, analyze and evaluate client server solutions for societal requirements at large."
+        ],
+        "courseRelevance": "The key technology of the information age is communications. Data communications and networking is a truly global area of study, enabling global communication over telephone lines and the Internet. This technology is the backbone of all IT infrastructures worldwide.",
+        "units": [
+          {
+            "title": "Section 1: Topics/Contents",
+            "content": "Unit-I Data Communication, Networking Fundamentals, Physical Layer (04 Hours): Communication Model: Source, Transmitter, Transmission System... (Details as provided)",
+            "fullDetails": "Communication Model: Source, Transmitter, Transmission System, Receiver, Destination, Data Terminal Equipment (DTE), Data Communication Equipment (DCE). Transmission Configurations: Point to Point and Multipoint. Transmission Modes: Synchronous and Asynchronous. Transmission Methods: Serial and Parallel. Communication Modes: Simplex, Half Duplex, and Full Duplex. Line Coding: Unipolar NRZ, Polar NRZ, NRZ Inverted, Bipolar Encoding, Manchester Encoding, Differential Manchester Encoding. Modulation: Analog Modulation: Amplitude, Frequency, Phase. Pulse Modulation Techniques: PCM, PAM, PWM, PPM. Digital Modulation: ASK, FSK, MSK, GMSK, PSK, BPSK, PSK, QAM, CPM, OFDM and multicarrier modulations.\nNetworking Fundamentals: Types of Computer Networks: LAN, MAN, WAN, PAN, Internet, internet and Intranet. Network Architectures: Client-Server; Peer To Peer. Network Architecture Modes: Infrastructure and Ad-hoc mode. Network Topologies: Mesh, Star and Hierarchical. Reference Models: OSI, TCP/IP. Design Issues for Layers. Is ATM still used? Is ISDN dying? Is Frame Relay outdated? Is SNA still present in the Market?\nPhysical Layer: Transmission Mediums: Air, Water, Vacuum, Coaxial, Cat5, Cat5e, Cat6, Cat6a, Cat7, Cat8, OFC - Single and Multicore. Networking Devices Wired and Wireless: NIC, Repeater, Bridge, Switch, Modem, Router, Gateways and Access Point."
+          },
+          {
+            "title": "",
+            "content": "Unit-II Logical Link Control (06 Hours): Design Issues: Services to Network Layer, Framing, Error Control...",
+            "fullDetails": "Logical Link Control: Design Issues: Services to Network Layer, Framing, Error Control: Parity Bits, Hamming Codes and CRC. Flow Control Protocols: Unrestricted Simplex, Stop and Wait, Sliding Window Protocol, WAN Connectivity: PPP and HDLC. PPPoE, PPPoA. Is DOCSIS used in 2023? Do we use DSL line in 2023? Do we use coaxial cable in 2023? Is PPP still used?"
+          },
+          {
+            "title": "",
+            "content": "Unit-III Medium Access Control (04 Hours): Channel Allocation: Static and Dynamic, Multiple Access Protocols...",
+            "fullDetails": "Medium Access Control: Channel Allocation: Static and Dynamic, Multiple Access Protocols: Pure and Slotted ALOHA, CSMA, WDMA. Legacy Standard: 10 Mbps IEEE 802.3 Standard(Ethernet), Wiring Schemes and Frame Formats, CSMA/CD, Binary Exponential Back-off Algorithm. High Speed Ethernet Standards: Fast, Gigabit and 10Gigabit (Focus on Gigabit Networks). Wireless Standards: Radio Spectrum, Frequency Hopping (FHSS) and Direct Sequence (DSSS), IEEE 802.11a/b/g/n/ac, IEEE 802.15, IEEE 802.15.4 and IEEE 802.16 Standards, CSMA/CA, Introduction of Infrastructure and Data Processing Unit (IPU and DPU)."
+          },
+          {
+            "title": "Section 2: Topics/Contents",
+            "content": "Unit-IV Network Layer (06 Hours): Switching Techniques: Circuit, Message and Packet Switching, Logical Addressing: IPv4 and IPv6, Subnetting, NAT...",
+            "fullDetails": "Network Layer: Switching Techniques: Circuit, Message and Packet Switching. Logical Addressing: IPv4 and IPv6, Subnetting, NAT, CIDR. Network Layer Protocols: IP, ICMP, Routing Protocols: Distance Vector, Link State, and Path Vector. Routing in Internet: RIP, OSPF, BGP, Congestion control and QoS, MPLS, Mobile IP, Routing in MANET: AODV, DSR."
+          },
+          {
+            "title": "",
+            "content": "Unit-V Transport Layer (04 Hours): Services: Berkeley Sockets, Addressing, Connection Establishment...",
+            "fullDetails": "Transport Layer: Services: Berkeley Sockets, Addressing, Connection Establishment, Connection Release, Flow control and Buffering, Multiplexing. HTH Layer Protocols: TCP, Timer management, UDP. Quality of Service: TCP Congestion Control. Traffic Shaping: AIMD. QUIC Protocol, Real Time Support Protocols: RTP, SCTP, Differentiated services, TCP and UDP for Wireless."
+          },
+          {
+            "title": "",
+            "content": "Unit-VI Application Layer (04 Hours): Address Resolution: DNS, WWW: HTTP1.1/1.2/2.0 and HTTPS with SSL...",
+            "fullDetails": "Application Layer: Address Resolution: DNS, WWW: Hyper Text Transfer Protocol (HTTP1.1/1.2/2.0) and HTTPS with SSL, Web Service, Email: SMTP, MIME, POP3 and Webmail, File Transfer: FTP, Dynamic Logical Addressing: DHCP, Custom packet generation, Design, development and evaluation of scalable enterprise application using communication and service frameworks."
+          }
+        ],
+        "tutorials": [
+          "1) Examples and analysis of Encoding Methods: Unipolar NRZ, Polar NRZ, NRZ Inverted, Bipolar, Manchester, Differential Manchester",
+          "2) Line coding, Channel Encoding and modulations in IEEE 802.3, 802.11, 3G,4G,5G",
+          "3) Examples on Network Performance parameters: RTT, Delay, Bandwidth, Throughput, efficiency",
+          "4) PHY and MAC Layer IEEE 802.3 Standards for Ethernet speeds (10 Mbps to 100 Gbps)",
+          "5) PHY and MAC Layer IEEE 802.11 Wireless LAN Standards (a/b/g/n/ac/ax)",
+          "6) Examples of Network Layer Logical Addressing, Subnetting, NAT, routing in internetwork"
+        ],
+        "practicals": [
+          "1) Program for Unipolar NRZ, Polar NRZ, NRZ Inverted, Bipolar, Manchester, Differential Manchester.",
+          "2) Setup a small wired/wireless network, hands on commands: ping, ipconfig, arp, netstat...",
+          "3) Program for error detection/correction with Hamming Code or CRC, analyze with Wireshark.",
+          "4) Simulation of Go back N and Selective Repeat sliding window, analyze with Wireshark.",
+          "5) Program to find shortest path using Dijkstra for network flow, OSPF style usage.",
+          "6) TCP/UDP Socket programming: Hello, file transfer, calculator, analyzing packets with Wireshark."
+        ],
+        "courseProjects": [
+          "1. Simulation of modulation/demodulation for digital telephone lines",
+          "2. Simulation for 100 Mbps Ethernet",
+          "3. Simulation for Gigabit Ethernet",
+          "4. Simulation for 10Gigabit Ethernet",
+          "5. Simulation for 3G,4G mobile networks, or line encoding methods",
+          "6. Design and deploy TCP-based Multithreaded HTTP/FTP/SMTP/Chat solutions"
+        ],
+        "groupDiscussionAreas": [
+          "1. Energy-Efficient Architectures For Communication System",
+          "2. Satellite Communication System",
+          "3. Data Communication in Software Defined Networks",
+          "4. Cognitive Radios for Future Communication Frameworks",
+          "5. Fast Ethernet, Gigabit Ethernet, 10G Ethernet details",
+          "6. IEEE 802.11 protocols for wireless physical layer standard"
+        ],
+        "homeAssignmentAreas": [
+          "Design: Communication framework for irrigation system or automated car",
+          "Case Study: WiTricity technology, multiple access schemes in 4G, RFCs for wired/wireless TCP",
+          "Blog: Journey of line encoding methods, Internet routing protocols, application layer protocols",
+          "Survey: Routing protocols for MANET, IEEE 802.15.4 for IoT, IEEE 802.11 Wireless"
+        ]
+      }
+    ]
+  }
+  
