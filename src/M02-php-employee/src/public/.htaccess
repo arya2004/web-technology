@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# If the request is not pointing to a real file or directory, pass it through
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Append .php to URLs automatically
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
