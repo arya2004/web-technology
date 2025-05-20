@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Chessboard</title>
+    <style>
+        /* --- Container styling --- */
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .chessboard {
+            display: grid;
+            /* 8 columns, each equally wide */
+            grid-template-columns: repeat(8, 1fr);
+            /* maintain a square board: width controls height */
+            width: 90vmin;
+            /* ensure it never overflows small screens */
+            max-width: 95vw;
+            /* gap between squares if you like (optional) */
+            /* grid-gap: 2px; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Square styling --- */
+        .square {
+            /* Each square is a flexbox so content can be centered */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Force squares to be perfect squares via aspect-ratio */
+            aspect-ratio: 1;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+        }
+
+        .square.white {
+            background: #eee;
+        }
+
+        .square.black {
+            background: #333;
+            color: #fff;
+        }
+
+        /* --- Responsive tweaks --- */
+        @media (max-width: 600px) {
+            .chessboard {
+                width: 95vw;
+            }
+
+            .square {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chessboard" id="board"></div>
+
+    <script>
+        /**
+         * Generates an 8x8 chessboard.
+         * Alternates colors; top-left is a dark square (a8).
+         */
+        (function buildBoard() {
+            const board = document.getElementById('board');
+            const size = 8;
+            for (let row = 0; row < size; row++) {
+                for (let col = 0; col < size; col++) {
+                    const square = document.createElement('div');
+                    square.classList.add('square');
+                    // If row+col is even, make it black; else white
+                    const isBlack = (row + col) % 2 === 0;
+                    square.classList.add(isBlack ? 'black' : 'white');
+                    // Optional: label squares by coordinate
+                    // const file = String.fromCharCode( 'a'.charCodeAt(0) + col );
+                    // const rank = size - row;
+                    // square.textContent = file + rank;
+                    board.appendChild(square);
+                }
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
