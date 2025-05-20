@@ -1,0 +1,10 @@
+/* style.css */
+
+.calculator-card {
+  width: 320px;
+}
+
+#display {
+  height: 60px;
+  font-size: 1.75rem;
+}
